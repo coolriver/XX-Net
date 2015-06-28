@@ -36,7 +36,6 @@
         window.previousOffset  = 0;
         window.offset          = 1;
         window.isAutoScrollLog = true;
-        window.isgetLogProcessing = false;
 
         var timer = $.timer(function() {
             getLog();
@@ -74,8 +73,6 @@
 </script>
 <script type="text/javascript">
     function getLog() {
-        if ( window.isgetLogProcessing ) { return }
-        window.isgetLogProcessing = true;
         var pageRequests = {
             'cmd': 'get_new',
             'last_no': offset
@@ -97,10 +94,6 @@
                     }
                 });
                 window.previousOffset = window.offset;
-                window.isgetLogProcessing = false;
-            },
-            error: function(xml, info, obj) {
-                window.isgetLogProcessing = false;
             }
         });
     }

@@ -29,6 +29,7 @@
                     <button class="btn btn-primary btn-block" id="submit-ip-range" type="submit">提交</button>
                 </div> <!-- .span12 -->
             </div> <!-- .row-fluid -->
+
         </form>
     </div> <!-- #authentication -->
     <div id="logs" class="tab-pane fade">
@@ -46,7 +47,7 @@
 </script>
 
 <script type="text/javascript">
-    function loadScanIpLog(){
+    function load_scan_ip_log(){
         $.ajax({
             type: 'GET',
             url: 'http://127.0.0.1:8084/scan_ip?cmd=get_scan_ip_log',
@@ -83,11 +84,11 @@
 
     $('#ip-range-content').load('http://127.0.0.1:8084/scan_ip?cmd=get_range');
 
-    loadScanIpLog();
+    load_scan_ip_log();
 </script>
 <script type="text/javascript">
     $('#reload-scan-ip-log').click(function(){
-        loadScanIpLog();
+        load_scan_ip_log();
     });
 </script>
 <script type="text/javascript">

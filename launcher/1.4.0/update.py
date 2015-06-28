@@ -36,7 +36,7 @@ def version_to_bin(s):
 def download_file(url, file):
     try:
         logging.info("download %s to %s", url, file)
-        req = opener.open(url, cafile="")
+        req = opener.open(url)
         CHUNK = 16 * 1024
         with open(file, 'wb') as fp:
             while True:

@@ -1,0 +1,6 @@
+modules:
+  goagent: {auto_start: 1, control_port: 8084, current_version: 3.1.49}
+  launcher: {current_version: 1.4.0}
+  php_proxy: {control_port: 8083, current_version: 1.0.0}
+update: {last_path: 'C:\Users\jjj\Downloads\XX-Net-1.14.10\XX-Net-1.14.10\launcher\1.4.0',
+  uuid: 03a05c14-0245-4391-be32-8fbd4b81d65b}
